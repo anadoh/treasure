@@ -18,13 +18,13 @@ const distance = function(event, treasure) {
 };
 
 const hint = function (distance) {
-    if (distance < 10){
-        return "Burns!"
-    } else if (distance < 20) {
+    if (distance < 30){
+        return "Treasure!"
+    } else if (distance < 50) {
         return "Hot"
-    } else if (distance < 40) {
-        return "Warmer"
     } else if (distance < 70) {
+        return "Warmer"
+    } else if (distance < 90) {
         return "Warm"
     } else if (distance < 150) {
         return "Cold"
@@ -42,9 +42,10 @@ document.querySelector("#map").onclick = function(event) {
     const userDistance = distance(event,treasure);
     const hintText = hint(userDistance);
     document.querySelector("#distance").textContent = hintText;
+    document.querySelector("#counter").textContent = clickCouner;
     
-    if (userDistance < 8) {
-        alert(`Treasure was find after ${clickCouner} trials!`)
+    if (hintText === "Treasure!") {
+        document.querySelector("#distance").textContent = hintText;
     }
 
 };

@@ -1,0 +1,53 @@
+/* reset */
+html {
+    background: hsl(20, 40%, 90%);
+    background-image: 
+    linear-gradient(90deg, rgb(82, 77, 74) 11px, transparent 0),
+    linear-gradient(90deg, rgb(37, 145, 85) 30px, transparent 0),
+    linear-gradient(90deg, rgb(45, 49, 61) 20px, transparent 0);
+    background-size: 80px 100%, 50px 100%,40px 100%;
+}
+
+h1,
+.box,
+.oval {
+    color: lightgrey;
+    background-color: rgb(82, 77, 74) ;
+    border: 10px solid hsl(20, 40%, 90%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-box {
+    margin-right: 90px;
+    border-style: solid;
+    border-width: 1rem;
+    border-color: rgb(82, 77, 74) ;
+}
+
+.box {
+    width: 200px;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.oval {
+    box-sizing: border-box;
+    font-size: 4rem;
+    width: 200px;
+    height: 250px;
+    border-radius: 100px/ 125px;
+    margin-bottom: 3rem;;
+}
+
+
