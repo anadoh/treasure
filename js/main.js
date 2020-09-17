@@ -41,9 +41,9 @@ const finishGame = function (hintText) {
 }
 
 const showConfetti = function() {
-    var confettiElement = document.querySelector("#my-canvas");
-    var confettiSettings = {target: confettiElement };
-    var confetti = new ConfettiGenerator(confettiSettings);
+    const confettiElement = document.querySelector("#my-canvas");
+    const confettiSettings = {target: confettiElement };
+    const confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
 }
 

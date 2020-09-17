@@ -1,4 +1,5 @@
 'use strict';
+// Confetti Generator from: https://www.npmjs.com/package/confetti-js
 
 function ConfettiGenerator(params) {
   //////////////
