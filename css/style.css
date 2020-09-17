@@ -50,4 +50,10 @@ h1,
     margin-bottom: 3rem;;
 }
 
+.confetti {
+    position: absolute;
+    top: 0;  
+}
+
+
 

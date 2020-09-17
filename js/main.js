@@ -35,17 +35,31 @@ const hint = function (distance) {
     }
 };
 
+const finishGame = function (hintText) {
+    document.querySelector("#distance").textContent = hintText;
+    document.querySelector("#map").remove();
+}
+
+const showConfetti = function() {
+    var confettiElement = document.querySelector("#my-canvas");
+    var confettiSettings = {target: confettiElement };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+}
 
 document.querySelector("#map").onclick = function(event) {
     clickCouner++;
-    console.log(clickCouner)
+    console.log(clickCouner);
     const userDistance = distance(event,treasure);
     const hintText = hint(userDistance);
     document.querySelector("#distance").textContent = hintText;
     document.querySelector("#counter").textContent = clickCouner;
     
     if (hintText === "Treasure!") {
-        document.querySelector("#distance").textContent = hintText;
+        finishGame(hintText);
+        showConfetti();
     }
-
+    if (clickCouner > 24) {
+        finishGame("Game Over");
+    }
 };
